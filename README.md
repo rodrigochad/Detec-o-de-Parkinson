@@ -1,4 +1,4 @@
-## Leia-me: Classificação da Doença de Parkinson com XGBoost
+## Classificação da Doença de Parkinson com XGBoost
 
 **Objetivo:**
 
