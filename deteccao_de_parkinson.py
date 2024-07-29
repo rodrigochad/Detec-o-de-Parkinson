@@ -39,37 +39,3 @@ print("Acurácea:", accuracy)
 print("Precisão:", precision)  # Corrigido: "Precisão" repetido, deve ser "Recall"
 print("Recall:", recall)
 print("F1-score:", f1)
-
-import csv
-
-def get_header_without_name_status(filename):
-  """
-  Esta função lê um arquivo CSV e retorna uma lista de cabeçalhos, excluindo "name" e "status".
-
-  Args:
-      filename (str): Nome do arquivo CSV.
-
-  Returns:
-      list: Lista de cabeçalhos sem "name" e "status".
-  """
-
-  # Lê o arquivo CSV e retorna o cabeçalho (primeira linha) sem "name" e "status"
-  with open(filename, 'r') as csvfile:
-    reader = csv.reader(csvfile)
-    header = next(reader)
-    header.remove('name')
-    header.remove('status')
-    return header
-
-# Exemplo de uso:
-filename = 'Parkinson disease.csv'  # Substitua pelo nome do seu arquivo
-header_list = get_header_without_name_status(filename)
-print(header_list)
-
-characteristics = []
-
-for feature in header_list:  # Iteração usando o nome da característica
-  value = input(f"Digite o valor do(a) {feature}: ")
-  characteristics.append(value)
-
-print(characteristics)
