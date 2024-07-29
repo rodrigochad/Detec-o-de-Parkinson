@@ -35,7 +35,7 @@ precision = precision_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred)
 f1 = f1_score(y_test, y_pred)
 
-print("Precisão:", accuracy)
+print("Acurácea:", accuracy)
 print("Precisão:", precision)  # Corrigido: "Precisão" repetido, deve ser "Recall"
 print("Recall:", recall)
 print("F1-score:", f1)
